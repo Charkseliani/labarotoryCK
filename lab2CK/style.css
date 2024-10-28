@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f2e6d8;
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.content {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px;
+}
+
+.content-left {
+	background-color: #fff;
+	width: 700px;
+	padding: 30px;
+	margin-right: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.content-right {
+	background-color: #fff;
+	padding: 30px;
+	margin-left: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.retro-title {
+	font-size: 36px;
+	color: #333;
+	margin-bottom: 20px;
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.retro-text {
+	font-size: 18px;
+	color: #283421;
+	margin-bottom: 10px;
+}
+
+.retro-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.retro-list li {
+	margin-bottom: 5px;
+}
+
+.retro-list li::before {
+	content: "\2022";
+	margin-right: 10px;
+	color: #25302;
+}
+
+.retro-photo {
+	width: 500px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+    
+  
