@@ -122,11 +122,8 @@
     </div>
 
     <script>
-        // Обработка отправки формы
         document.getElementById('student-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Предотвращаем перезагрузку страницы
-
-            // Получаем значения из формы
+            event.preventDefault(); 
             const id = document.getElementById('id').value;
             const fio = document.getElementById('fio').value;
             const recordBook = document.getElementById('record-book').value;
@@ -136,11 +133,9 @@
             const educationForm = document.getElementById('education-form').value;
             const direction = document.getElementById('direction').value;
 
-            // Создаем новую строку в таблице
             const table = document.getElementById('students-table').getElementsByTagName('tbody')[0];
             const newRow = table.insertRow();
 
-            // Заполняем ячейки новой строки
             newRow.insertCell(0).textContent = id;
             newRow.insertCell(1).textContent = fio;
             newRow.insertCell(2).textContent = recordBook;
@@ -150,7 +145,6 @@
             newRow.insertCell(6).textContent = educationForm;
             newRow.insertCell(7).textContent = direction;
 
-            // Очищаем форму
             document.getElementById('student-form').reset();
         });
     </script>
