@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2e6d8;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #6e7c52;
+    border-radius: 10px;
+    padding: 20px;
+}
+h2 {
+    text-align: center;
+}
+
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-caption {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #314408;
+}
+
+th, td {
+    padding: 15px; 
+    text-align: left;
+}
+
+thead {
+    background-color: #314408; 
+    color: #d5d9cd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e0e0e0; 
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; 
+}
+
+tbody tr:hover {
+    background-color: #d5d9cd; 
+}
+
+.form-container {
+    border: 2px solid #314408; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    max-width: 400px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+#student-form {
+    display: flex;
+    flex-direction: column; 
+    gap: 5px; 
+}
+
+#student-form label {
+    font-size: 12px; 
+}
+
+#student-form input, #student-form select {
+    padding: 5px; 
+    width: 100%; 
+    border-radius: 5px;
+    border: 1px solid #314408; 
+}
+
+#student-form button {
+    padding: 5px;
+    background-color: #314408; 
+    color: #d5d9cd; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+#student-form button:hover {
+    background-color: #25302; /* Цвет кнопки при наведении */
+}

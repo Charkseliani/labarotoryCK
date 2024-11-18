@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <div class="header">
+        <a href="lab5.html">Основная страница</a>
+        <a href="page2.html">Позиционирование элементов</a>
+        <a href="table.html">Таблица</a>
+    </div>
+    
+    <!-- Заголовок таблицы -->
+    <h2>Студенты</h2>
+
+    <!-- Таблица -->
+    <table id="students-table">
+        <caption>Данные</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ФИО студента</th>
+                <th>Номер зачётной книжки</th>
+                <th>Номер группы</th>
+                <th>Пол</th>
+                <th>Возраст</th>
+                <th>Форма поступления</th>
+                <th>Название направления</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mark Otto @mdo</td>
+                <td>11</td>
+                <td>6201</td>
+                <td>M</td>
+                <td>19</td>
+                <td>Очная</td>
+                <td>ИВТ</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jacob Thornton @fat</td>
+                <td>22</td>
+                <td>6402</td>
+                <td>M</td>
+                <td>21</td>
+                <td>Очная</td>
+                <td>ИВТ</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Larry the Bird @twitter</td>
+                <td>33</td>
+                <td>6202</td>
+                <td>Ж</td>
+                <td>19</td>
+                <td>Заочная</td>
+                <td>ИВТ</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Jake Propper @vso</td>
+                <td>44</td>
+                <td>6405</td>
+                <td>М</td>
+                <td>22</td>
+                <td>Очная</td>
+                <td>ИВТ</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Bob Bobby @bob</td>
+                <td>55</td>
+                <td>6206</td>
+                <td>Ж</td>
+                <td>19</td>
+                <td>Очная</td>
+                <td>ИВТ</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="form-container">
+        <h2>Добавить студента</h2>
+        <form id="student-form">
+            <label for="id">ID:</label>
+            <input type="number" id="id" name="id" required>
+
+            <label for="fio">ФИО:</label>
+            <input type="text" id="fio" name="fio" required>
+
+            <label for="record-book">Зачётка:</label>
+            <input type="text" id="record-book" name="record-book" required>
+
+            <label for="group">Группа:</label>
+            <input type="text" id="group" name="group" required>
+
+            <label for="gender">Пол:</label>
+            <select id="gender" name="gender" required>
+                <option value="М">М</option>
+                <option value="Ж">Ж</option>
+            </select>
+
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="education-form">Форма:</label>
+            <select id="education-form" name="education-form" required>
+                <option value="Очная">Очная</option>
+                <option value="Заочная">Заочная</option>
+            </select>
+
+            <label for="direction">Направление:</label>
+            <input type="text" id="direction" name="direction" required>
+
+            <button type="submit">Добавить</button>
+        </form>
+    </div>
+
+    <script>
+        // Обработка отправки формы
+        document.getElementById('student-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем перезагрузку страницы
+
+            // Получаем значения из формы
+            const id = document.getElementById('id').value;
+            const fio = document.getElementById('fio').value;
+            const recordBook = document.getElementById('record-book').value;
+            const group = document.getElementById('group').value;
+            const gender = document.getElementById('gender').value;
+            const age = document.getElementById('age').value;
+            const educationForm = document.getElementById('education-form').value;
+            const direction = document.getElementById('direction').value;
+
+            // Создаем новую строку в таблице
+            const table = document.getElementById('students-table').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+
+            // Заполняем ячейки новой строки
+            newRow.insertCell(0).textContent = id;
+            newRow.insertCell(1).textContent = fio;
+            newRow.insertCell(2).textContent = recordBook;
+            newRow.insertCell(3).textContent = group;
+            newRow.insertCell(4).textContent = gender;
+            newRow.insertCell(5).textContent = age;
+            newRow.insertCell(6).textContent = educationForm;
+            newRow.insertCell(7).textContent = direction;
+
+            // Очищаем форму
+            document.getElementById('student-form').reset();
+        });
+    </script>
+</body>
+</html>
